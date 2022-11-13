@@ -1,7 +1,7 @@
 import random
 import time
 
-#TODO: Fix life system
+#TODO: Fix Life System
 
 print("""   
  ______     ______     ______     ______      ______   __  __     ______        __         __     ______     ______  
