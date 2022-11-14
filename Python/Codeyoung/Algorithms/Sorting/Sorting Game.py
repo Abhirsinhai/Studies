@@ -1,7 +1,6 @@
 import random
-import time
 
-#TODO: Fix Life System
+#TODO: Fix Life System and fix sort check
 
 print("""   
  ______     ______     ______     ______      ______   __  __     ______        __         __     ______     ______  
@@ -18,76 +17,80 @@ You will have three lives and if you loose all three lives you will loose.
 There are three different difficulty levels, there is one custom difficulty that you can customize.
 The three different difficulty levels are easy, medium and hard.
 """)
-
+my_list = []
 lives = 3
+new = []
 
 def myGameEasy():
-    my_list = []
     for i in range(5): 
         my_list.append(random.randint(1,10))
     print(my_list)
 
-    new = []
-    for i in range(len(my_list)):
+    for i in range(5):
         x = int(input("enter the number: "))
-        new.append(x)
-        if new[i] != my_list[i]:
-            lives = lives - 1
-            if lives == 0:
-                print("Game over!")
-            else:
-                print("You lost 1 live, now you have", lives, "lives")
-                
+        if x == my_list[i]:
+            new.append(x)
+        else:
+            print("You Lost 1 live!")
+            lives -= 1
+        if lives == 0:
+            print("Game Over!")
+            break
+    else:
+        print("You win!")
 def myGameMedium():
-    my_list = []
     for i in range(10): 
         my_list.append(random.randint(1,50))
     print(my_list)
 
-    new = []
-    for i in range(len(my_list)):
+    for i in range(10):
         x = int(input("enter the number: "))
-        new.append(x)
-        if new[i] != my_list[i]:
-            lives = lives - 1
-            if lives == 0:
-                print("Game over!")
-            else:
-                print("You lost 1 live, now you have", lives, "lives")
+        if x == my_list[i]:
+            new.append(x)
+        else:
+            print("You Lost 1 live!")
+            lives -= 1
+        if lives == 0:
+            print("Game Over!")
+            break
+    else:
+        print("You win!")
 
 def myGameHard():
-    my_list = []
-    for i in range(5): 
+    for i in range(15): 
         my_list.append(random.randint(1,100))
     print(my_list)
 
-    new = []
-    for i in range(len(my_list)):
+    for i in range(15):
         x = int(input("enter the number: "))
-        new.append(x)
-        if new[i] != my_list[i]:
-            lives = lives - 1
-            if lives == 0:
-                print("Game over!")
-            else:
-                print("You lost 1 live, now you have", lives, "lives")
+        if x == my_list[i]:
+            new.append(x)
+        else:
+            print("You Lost 1 live!")
+            lives -= 1
+        if lives == 0:
+            print("Game Over!")
+            break
+    else:
+        print("You win!")
 
 def myGameCustom():
-    my_list = []
     for i in range(customListAmount): 
-        my_list.append(random.randint(1, customListRange))
+        my_list.append(random.randint(1,customListRange))
     print(my_list)
 
-    new = []
-    for i in range(len(my_list)):
+    for i in range(customListAmount):
         x = int(input("enter the number: "))
-        new.append(x)
-        if new[i] != my_list[i]:
-            lives = lives - 1
-            if lives == 0:
-                print("Game over!")
-            else:
-                print("You lost 1 live, now you have", lives, "lives")
+        if x == my_list[i]:
+            new.append(x)
+        else:
+            print("You Lost 1 live!")
+            lives -= 1
+        if lives == 0:
+            print("Game Over!")
+            break
+    else:
+        print("You win!")
                 
 
 

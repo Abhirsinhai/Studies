@@ -16,7 +16,6 @@ def QuickSort(arr, low, high):
     QuickSort(arr, low, pivot - 1)
     QuickSort(arr, pivot + 1, high)
 
-# Driver Code
 array = [9, 1, 8, 2, 7, 3, 5, 6, 4]
 print("The Original Array:", array)
 
