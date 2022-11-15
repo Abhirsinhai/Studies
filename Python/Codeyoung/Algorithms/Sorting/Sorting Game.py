@@ -22,9 +22,11 @@ lives = 3
 new = []
 
 def myGameEasy():
+    lives = 3
     for i in range(5): 
         my_list.append(random.randint(1,10))
     print(my_list)
+    my_list.sort()
 
     for i in range(5):
         x = int(input("enter the number: "))
@@ -33,15 +35,32 @@ def myGameEasy():
         else:
             print("You Lost 1 live!")
             lives -= 1
-        if lives == 0:
-            print("Game Over!")
-            break
+            if lives == 0:
+                print("Oh no! you lost :(")
+                return
+            x = int(input("Please enter the number again, if you do the same mistake you will loose another live: "))
+            if x == my_list[i]:
+                print("You got it!")
+            elif x != my_list[i]:
+                print("Oh No! You did not get the number correct!")
+                lives -= 1
+                if lives == 0:
+                    print("You also lost. :(")
+                    return
+            elif x != my_list[i] & lives == 0:
+                print("oh no, you lost. :(")
+    if lives == 0:
+        print("Game Over!")
+        return
     else:
         print("You win!")
+
 def myGameMedium():
+    lives = 3
     for i in range(10): 
         my_list.append(random.randint(1,50))
     print(my_list)
+    my_list.sort()
 
     for i in range(10):
         x = int(input("enter the number: "))
@@ -50,16 +69,32 @@ def myGameMedium():
         else:
             print("You Lost 1 live!")
             lives -= 1
-        if lives == 0:
-            print("Game Over!")
-            break
+            if lives == 0:
+                print("Oh no! you lost :(")
+                return
+            x = int(input("Please enter the number again, if you do the same mistake you will loose another live: "))
+            if x == my_list[i]:
+                print("You got it!")
+            elif x != my_list[i]:
+                print("Oh No! You did not get the number correct!")
+                lives -= 1
+                if lives == 0:
+                    print("You also lost. :(")
+                    return
+            elif x != my_list[i] & lives == 0:
+                print("oh no, you lost. :(")
+    if lives == 0:
+        print("Game Over!")
+        return
     else:
         print("You win!")
 
 def myGameHard():
+    lives = 3
     for i in range(15): 
         my_list.append(random.randint(1,100))
     print(my_list)
+    my_list.sort()
 
     for i in range(15):
         x = int(input("enter the number: "))
@@ -68,16 +103,32 @@ def myGameHard():
         else:
             print("You Lost 1 live!")
             lives -= 1
-        if lives == 0:
-            print("Game Over!")
-            break
+            if lives == 0:
+                print("Oh no! you lost :(")
+                return
+            x = int(input("Please enter the number again, if you do the same mistake you will loose another live: "))
+            if x == my_list[i]:
+                print("You got it!")
+            elif x != my_list[i]:
+                print("Oh No! You did not get the number correct!")
+                lives -= 1
+                if lives == 0:
+                    print("You also lost. :(")
+                    return
+            elif x != my_list[i] & lives == 0:
+                print("oh no, you lost. :(")
+    if lives == 0:
+        print("Game Over!")
+        return
     else:
         print("You win!")
 
 def myGameCustom():
+    lives = 3
     for i in range(customListAmount): 
-        my_list.append(random.randint(1,customListRange))
+        my_list.append(random.randint(1, customListRange))
     print(my_list)
+    my_list.sort()
 
     for i in range(customListAmount):
         x = int(input("enter the number: "))
@@ -86,9 +137,23 @@ def myGameCustom():
         else:
             print("You Lost 1 live!")
             lives -= 1
-        if lives == 0:
-            print("Game Over!")
-            break
+            if lives == 0:
+                print("Oh no! you lost :(")
+                return
+            x = int(input("Please enter the number again, if you do the same mistake you will loose another live: "))
+            if x == my_list[i]:
+                print("You got it!")
+            elif x != my_list[i]:
+                print("Oh No! You did not get the number correct!")
+                lives -= 1
+                if lives == 0:
+                    print("You also lost. :(")
+                    return
+            elif x != my_list[i] & lives == 0:
+                print("oh no, you lost. :(")
+    if lives == 0:
+        print("Game Over!")
+        return
     else:
         print("You win!")
                 
