@@ -1,4 +1,4 @@
-# Classical Binary tree
+
 class Node:
    def __init__(self, data):
       self.left = None
@@ -23,6 +23,6 @@ class Node:
    def PrintTree(self):
       if self.left:
          self.left.PrintTree()
-      print( self.data),
+      print(self.data),
       if self.right:
          self.right.PrintTree()
