@@ -7,12 +7,14 @@ class Stack:
             print("stack overflow")
             stack.pop(-1)
         print(stack)
+        
     def pop(self, x):
         if len(stack) == 0:
             print("stack underflow")
         else:
             stack.pop(x)
         print(stack)
+        
     def isFull(self):
         if len(stack) == 10:
             print("stack is full")
@@ -20,18 +22,24 @@ class Stack:
             print("stack is empty")
         else:
             print("stack is not full")
+            
     def peek(self, x):
         print(stack[x])
+        
     def count(self):
         print("length of stack is", len(stack))
+        
     def change(self, x, y):
         stack.insert(x, y)
         print(stack)
+        
     def display(self):
         print(stack)
+        
     def reverseStack(self):
         stack.reverse()
         print(stack)
+        
 i = Stack()
 i.push(5)
 i.reverseStack()
