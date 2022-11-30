@@ -1,3 +1,4 @@
+import numpy
 """
 ● Anisha is learning statistics and she is unable to find the values of central tendency ( Mean, Median,
 and Mode) correctly. To help her write a python program. Create a class ct ( central tendency ) that will
@@ -58,7 +59,7 @@ class ct:
     def mode(self):
         print(max(set(self.l), key=self.l.count))
 
+List = [2, 4, 5, 7, 10, 27]
+List.sort()
 
-List = [51, 61, 12, 15, 201, 15]
-new = ct(List)
-new.mode()
+print(numpy.std(List))
